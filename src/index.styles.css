@@ -1,0 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    text-rendering: optimizeLegibility;
+    font-family: 'Bree Serif', serif; 
+}
