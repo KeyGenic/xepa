@@ -1,22 +1,45 @@
-import { TextField } from "@mui/material";
-import { Box } from "@mui/system";
+import { FormControl, Input, InputAdornment, InputLabel, TextField } from "@mui/material";
+import { Box, textAlign } from "@mui/system";
 import { Button } from "@mui/material";
 import React from "react";
-import { BtnLists, Btns, Logo, Nav } from "./headerbat.styles";
+import {ItemHolder, Items, Logo, Nav } from "./headerbat.styles";
+import SearchIcon from '@mui/icons-material/Search';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import CloseIcon from '@mui/icons-material/Close';
+import MenuIcon from '@mui/icons-material/Menu';
 
 export const HeaderBar = () => {
     return(
-        <header>
+        <header style ={{padding:'10px'}}>
         <Logo>XEPA</Logo>
+        <MenuIcon style ={{color:'#0d0d0',float:'right',margin:'-40px auto', fontSize:'30px'}}/>
         <Nav>
-            <Btns>
-                <BtnLists><Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
-        <span class="material-icons" style = {{transform:'translate(20px,-5px)'}}>search</span>
-        <TextField id="input-with-sx" label="Search" variant="standard" style = {{  textIndent: '25px'}} />
-      </Box></BtnLists>
-            </Btns>
-            <BtnLists><Button variant="text" style = {{color:'#FF9300'}}>Sign in</Button></BtnLists>
-            <BtnLists><Button variant="contained" style = {{background:'#FF9300'}}>Sign Up</Button></BtnLists>
+          <CloseIcon style ={{color:'#fff',float:'right',fontSize:'30px'}} />
+            <ItemHolder>
+              <Items>
+              <div id = 'profile' style = {{textAlign:'center'}}>
+          <AccountCircleIcon style = {{color:'#fff' , fontSize : '50px', textAlign:'center'}}/>
+          </div>
+                </Items>
+                <Items>
+                <Box sx={{ '& > :not(style)': { m: 1 } }}>
+      <FormControl  variant="standard">
+        <Input
+          id="input-search"
+          placeholder = 'Search'
+          style = {{borderBottom:'1px solid #fff', color:'#fff'}}
+          startAdornment={
+            <InputAdornment position="start">
+             <SearchIcon style = {{color:'#fff'}}/>
+            </InputAdornment>
+          }
+        />
+      </FormControl>
+      </Box>
+                </Items>
+            <Items><Button variant="text" style = {{color:'#FF9300'}}>Sign in</Button></Items>
+            <Items><Button variant="contained" style = {{background:'#FF9300'}}>Sign Up</Button></Items>
+            </ItemHolder>
             </Nav>
         </header>
     )
