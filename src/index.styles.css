@@ -7,4 +7,14 @@
 html,body{
     text-rendering: optimizeLegibility;
     font-family: 'Bree Serif', serif; 
+    overflow: hidden;
+}
+
+
+p{
+    font-family: 'Jost', sans-serif;
+}
+
+.swiper-pagination-bullets{
+    top:80%
 }

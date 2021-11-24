@@ -13,16 +13,20 @@
     "@emotion/react": "^11.6.0",
     "@emotion/styled": "^11.6.0",
     "@mui/material": "^5.1.1",
+    "axios": "^0.24.0",
     "css-loader": "^6.5.1",
+    "file-loader": "^6.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "style-loader": "^3.3.1",
-    "styled-components": "^5.3.3"
+    "styled-components": "^5.3.3",
+    "swiper": "^7.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.16.4",
     "@babel/preset-react": "^7.16.0",
+    "@mui/icons-material": "^5.1.1",
     "babel-loader": "^8.2.3",
     "html-webpack-plugin": "^5.5.0",
     "webpack": "^5.64.2",

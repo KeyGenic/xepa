@@ -10,11 +10,11 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 export const HeaderBar = () => {
     return(
-        <header style ={{padding:'10px'}}>
+        <header style ={{padding:'10px',background:'#0d0d0d'}}>
         <Logo>XEPA</Logo>
-        <MenuIcon style ={{color:'#0d0d0',float:'right',margin:'-40px auto', fontSize:'30px'}}/>
+        <MenuIcon style ={{color:'#FF9300',float:'right',margin:'-40px auto', fontSize:'30px'}}/>
         <Nav>
-          <CloseIcon style ={{color:'#fff',float:'right',fontSize:'30px'}} />
+          <CloseIcon style ={{color:'#FF9300',float:'right',fontSize:'30px'}} />
             <ItemHolder>
               <Items>
               <div id = 'profile' style = {{textAlign:'center'}}>

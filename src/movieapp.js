@@ -1,10 +1,10 @@
 import React from "react"
-import { HeaderBar } from "./components/headerbar/headerbar.components"
+import { Hero } from "./components/hero/hero.components"
 
 
 const MovieApp = () => {
     return(
-        <HeaderBar/>
+        <Hero/>
     )
 }
 
