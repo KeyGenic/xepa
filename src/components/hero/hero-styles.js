@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import myImg from '../../assets/spider-man nwh.jpg'
 
-export const MovieBg = styled.div`
-    background-image:linear-gradient(rgba(5,5,5,0.9),rgba(10,10,10,0.5)),url(${myImg});
+export const MovieBg =  styled.div`
+    background-image:linear-gradient(rgba(5,5,5,0.9),rgba(10,10,10,0.5)),url(${(props) => props.bg});
     background-position:center;
     height:100vh;
     background-size:cover;
@@ -20,17 +20,6 @@ export const HeroInfo = styled.div`
         border-radius:5px;
         display:inline-block;
     }
-`
-
-export const GenreHeroContainer = styled.ul`
-    list-style:none;
-    font-family: 'Jost', sans-serif;
-    display:flex;
-`
-
-export const GenreList = styled.li`
-    padding:10px;
-    transform:translateX(-7px);
 `
 
 export const HeroBtn = styled.div`

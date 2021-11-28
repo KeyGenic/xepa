@@ -1,9 +1,10 @@
 import React from "react"
-import { Hero } from "./components/hero/hero.components"
+import Hero from "./components/hero/hero.components"
+
 
 
 const MovieApp = () => {
-    return(
+return(
         <Hero/>
     )
 }

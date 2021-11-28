@@ -16,5 +16,9 @@ p{
 }
 
 .swiper-pagination-bullets{
-    top:80%
+    top:80%;
+}
+
+.swiper-pagination-bullet-active{
+    background: #FF9300;
 }
