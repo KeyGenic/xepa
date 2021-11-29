@@ -22,9 +22,9 @@ const Hero = ({data}) => {
   "clickable": true
 }}>
     {
-        data.splice(0,5).map(({title,vote_average,id,genre_id,backdrop_path}) => {
+        data.slice(0,5).map(({title,vote_average,id,genre_id,backdrop_path}) => {
           return <div key  = {id}>
-                    <SwiperSlide>
+                    <SwiperSlide key = {id}>
             <MovieBg bg = {`https://image.tmdb.org/t/p/original${backdrop_path}`}>
             <HeroInfo>
                 <h1>{title}</h1>

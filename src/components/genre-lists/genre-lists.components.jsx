@@ -30,8 +30,8 @@ export function GenreListMovies({id}){
 return(
     <GenreHeroContainer>
         {
-            genres.slice(0,3).map(({name}) => {
-                return <GenreList>
+            genres.slice(0,3).map(({name,id}) => {
+                return <GenreList key = {id}>
                     {name}
                 </GenreList>
             })

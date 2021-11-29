@@ -7,7 +7,7 @@
 html,body{
     text-rendering: optimizeLegibility;
     font-family: 'Bree Serif', serif; 
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 
