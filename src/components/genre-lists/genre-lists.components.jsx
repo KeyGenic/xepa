@@ -4,7 +4,7 @@ import { GenreList } from "./genre-lists";
 import axios from "axios";
 
 
-export function GenreListMovies({id}){
+export function GenreListMovies({id,style}){
     const [genres,setGenres] = useState([]);
     const [duration,setDuration] = useState('');
 
@@ -28,7 +28,7 @@ export function GenreListMovies({id}){
     }
     convertMinToHoursAndMin()
 return(
-    <GenreHeroContainer>
+    <GenreHeroContainer className = 'genrehero'>
         {
             genres.slice(0,3).map(({name,id}) => {
                 return <GenreList key = {id}>

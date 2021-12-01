@@ -1,7 +1,9 @@
 import React from "react"
 import Categories from "./components/categories-tab/categories-tab.components"
-import Hero from "./components/hero/hero.components"
+import Hero from "./components/hero/hero.components";
+import Trending from './components/Trending/trending.components'
 import { useState } from "react"
+import TopRated from "./components/top-rated/top-rated.components";
 
 const MovieApp = () => {
     const [value,setValue] = useState(0)
@@ -20,9 +22,9 @@ return(
 
 function categories(val){
     if(val === 0){
-        return <h1>trend</h1>
+        return <Trending/>
     }else if(val === 1){
-        return <h1>Top rated</h1>
+        return <TopRated/>
     }else if(val === 2){
         return <h1>Latest</h1>
     }else if(val === 3){
