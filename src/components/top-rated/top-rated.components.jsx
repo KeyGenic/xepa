@@ -3,7 +3,7 @@ import CategoriesMovie from '../categories-data/categories-data'
 
 function TopRated() {
   return (
-    <CategoriesMovie media = 'top_rated' type = 'movie' time = ''/>
+    <CategoriesMovie media = 'top_rated' type = 'movie' time = '' genresNum = ''/>
   )
 }
 

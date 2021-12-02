@@ -4,6 +4,8 @@ import Hero from "./components/hero/hero.components";
 import Trending from './components/Trending/trending.components'
 import { useState } from "react"
 import TopRated from "./components/top-rated/top-rated.components";
+import NowPlaying from "./components/now-playing/now-playing.components";
+import Upcoming from "./components/upcoming/upcoming.components";
 
 const MovieApp = () => {
     const [value,setValue] = useState(0)
@@ -13,11 +15,12 @@ return(
         <Hero/>
         </div>
         <div id = 'categories'>
-        <Categories value = {value} setValue = {setValue}/>
+        <Categories value = {value} setValue = {setValue} />
         {categories(value)}
         </div>
     </div>
     )
+  
 }
 
 function categories(val){
@@ -26,15 +29,24 @@ function categories(val){
     }else if(val === 1){
         return <TopRated/>
     }else if(val === 2){
-        return <h1>Latest</h1>
+        return <NowPlaying/>
     }else if(val === 3){
-        return <h1>Now Playing</h1>
-    }else if(val === 4){
-        return <h1>Upcoming</h1>
+        return <Upcoming/>
+    }else if (val === 'action'){
+        return <h1>'action</h1>
+    }else if (val === 'animation'){
+        return <h1>'animation</h1>
+    }else if (val === 'crime'){
+        return <h1>crime</h1>
+    }else if (val === 'horror'){
+        return <h1>'horror</h1>
+    }else if (val === 'mystery'){
+        return <h1>'Mystery</h1>
     }
     else{
-        return <h1>trend</h1>
+        return <Trending/>
     }
 }
+
 
 export default MovieApp

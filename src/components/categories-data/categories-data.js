@@ -6,10 +6,10 @@ import { GenreListMovies } from '../genre-lists/genre-lists.components'
 
 
 
-function CategoriesMovie({type,media,time}) {
+function CategoriesMovie({type,media,time,genresNum}) {
     const [data,setData] = useState([]);
     const [page,setPage] = useState(1)
-    let api = `https://api.themoviedb.org/3/${type}/${media}/${time}?api_key=cc65c8449d31408a45621d9ff608f031&language=en-US&page=${page}`
+    let api = `https://api.themoviedb.org/3/${type}/${media}/${time}?api_key=cc65c8449d31408a45621d9ff608f031${genresNum}&language=en-US&page=${page}`
     useEffect(() => {
         const getMoviesData = async() => {
             const result = await axios.get(api)

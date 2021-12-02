@@ -3,7 +3,7 @@ import CategoriesMovie from '../categories-data/categories-data'
 
 function Trending() {
   return (
-    <CategoriesMovie media = 'movie' time = 'day' type = 'trending'/>
+    <CategoriesMovie media = 'movie' time = 'day' type = 'trending' genresNum = '' />
   )
 }
 
