@@ -14,7 +14,6 @@ function Categories({value,setValue}) {
       html.style.overflow = 'hidden'
     };
     const handleClose = () => {
-        const menuGenre = document.querySelector('.MuiMenuItem-root')
       setAnchorEl(null);
       html.style.overflowY = 'auto';
       html.style.overflowX = 'hidden';
