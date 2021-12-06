@@ -13,6 +13,9 @@ top:0;
 right:-100%;
 z-index:2;
 transition:0.5s;
+a{
+    text-decoration:none
+}
 .MuiInput-underline{
     &::after{
         border-bottom: 2px solid #FF9300 !important;
