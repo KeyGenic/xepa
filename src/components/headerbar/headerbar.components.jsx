@@ -8,6 +8,8 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import CloseIcon from '@mui/icons-material/Close';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from "react-router-dom";
+import {useAuth } from "../context/context";
+import 'babel-polyfill';
 
 export const HeaderBar = () => {
   const nav = document.querySelector('#navigation');
@@ -22,6 +24,7 @@ export const HeaderBar = () => {
     nav.style.right = '-100%'
   }
 
+  const {currentUser,logOut} = useAuth()
 
     return(
         <header style ={{padding:'10px',background:'#0d0d0d'}}>
@@ -30,11 +33,6 @@ export const HeaderBar = () => {
         <Nav id = 'navigation'>
           <CloseIcon style ={{color:'#FF9300',float:'right',fontSize:'30px'}} className = 'close' onClick = {closeMenu} />
             <ItemHolder>
-              <Items>
-              <div id = 'profile' style = {{textAlign:'center'}}>
-          <AccountCircleIcon style = {{color:'#fff' , fontSize : '50px', textAlign:'center'}}/>
-          </div>
-                </Items>
                 <Items>
                 <Box sx={{ '& > :not(style)': { m: 1 } }}>
       <FormControl  variant="standard">
@@ -51,8 +49,14 @@ export const HeaderBar = () => {
       </FormControl>
       </Box>
                 </Items>
-            <Items><Link to = '/sign-in'><Button variant="text" style = {{color:'#FF9300'}} onClick = {closeMenu}>Sign in</Button></Link></Items>
+                  {
+                    currentUser === null?  <div>
+                    <Items><Link to = '/sign-in'><Button variant="text" style = {{color:'#FF9300'}} onClick = {closeMenu}>Sign in</Button></Link></Items>
             <Items><Link to = '/sign-up'><Button variant="contained" style = {{background:'#FF9300'} } onClick = {closeMenu}>Sign Up</Button></Link></Items>
+            </div>:<Items><Button variant="text" style = {{color:'#FF9300'}} onClick  = {async () => await logOut()} >Log Out</Button></Items>
+                  
+                  }
+            
             </ItemHolder>
             </Nav>
         </header>

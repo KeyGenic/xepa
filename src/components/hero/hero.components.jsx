@@ -12,12 +12,15 @@ import SwiperCore, {
 import popularData from '../getPopularMovies/getPopularMovies';
 import { GenreListMovies } from '../genre-lists/genre-lists.components';
 import { TrailerBtn } from '../trailer-btn/trailer-btn.components';
+import { AuthProvider } from '../context/context';
 
 const Hero = ({data}) => {
     SwiperCore.use([Pagination])
     return(
         <div>
+            <AuthProvider>
             <HeaderBar/>
+            </AuthProvider>
         <Swiper pagination={{
   "clickable": true
 }}>
@@ -49,7 +52,5 @@ const Hero = ({data}) => {
         </div>
     )
 } 
-
-console.log(name)
 
 export default popularData(Hero,`https://api.themoviedb.org/3/movie/popular?api_key=cc65c8449d31408a45621d9ff608f031&language=en-US`)

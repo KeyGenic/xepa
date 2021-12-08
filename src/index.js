@@ -6,7 +6,6 @@ import './index.styles.css';
 
 ReactDOM.render(
    <MovieApp/>
-   
   ,
   document.querySelector('.root')
 );
